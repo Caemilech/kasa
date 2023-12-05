@@ -1,0 +1,38 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 45px auto 50px auto;
+    max-width: 1024px;
+    @media (max-width : 1024px) {
+        margin: 20px 20px 27px 20px ;
+    }
+
+    .kasa_logo_header{
+        @media (max-width : 768px) {
+            width: 145px;
+            height: 46px;
+        }
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-end: end;
+        grid-gap: 57px;
+        align-items: center;
+        font-size: 24px;
+        @media (max-width : 768px) {
+            grid-gap: 10px ;
+            font-size: 12px;
+            text-transform: uppercase; 
+        }
+        
+        a{
+            color: #FF6060;
+        }
+
+        .current-page{
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.footer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 26px;
+    padding: 66px 0 29px 0;
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+    @media (max-width : 768px) {
+        grid-gap: 0;
+    }
+
+    p{
+        font-size: 24px;
+        color: white;
+        @media (max-width : 768px) {
+            width: 112px;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 45px auto 50px auto;
+  max-width: 1024px;
+}
+@media (max-width: 1024px) {
+  .header {
+    margin: 20px 20px 27px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .header .kasa_logo_header {
+    width: 145px;
+    height: 46px;
+  }
+}
+.header nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-end: end;
+  grid-gap: 57px;
+  align-items: center;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .header nav {
+    grid-gap: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+.header nav a {
+  color: #FF6060;
+}
+.header nav .current-page {
+  text-decoration: underline;
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 26px;
+  padding: 66px 0 29px 0;
+  align-items: center;
+  justify-items: center;
+  background-color: black;
+}
+@media (max-width: 768px) {
+  .footer {
+    grid-gap: 0;
+  }
+}
+.footer p {
+  font-size: 24px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .footer p {
+    width: 112px;
+    font-size: 12px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=app.css.map */
