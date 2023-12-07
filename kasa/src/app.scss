@@ -1,3 +1,10 @@
+@import './mixin';
 @import './reset';
+@import './variables';
 @import './components/Header/header';
-@import './components/Footer/footer'
+@import './components/Footer/footer';
+@import './components/Card/card';
+@import './components/CardApartment/cardApartment';
+@import './components/Dropdown/dropdown';
+@import './pages/Home/home';
+@import './pages/APropos/aPropos';

@@ -1,0 +1,63 @@
+@mixin background__header {
+    position: relative;
+    max-width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+    background: black;
+    mix-blend-mode: darken;
+    
+    @media (max-width : 768px) {
+        height: 111px;
+    }
+}
+
+@mixin background__header-img {
+    width: 100%;
+    height: 223px;
+    object-fit: cover;
+    opacity: 0.6;
+    border-radius: 25px;
+    @media (max-width : 768px) {
+        height: 111px;
+    }
+}
+
+@mixin background__header-text-center {
+    position: absolute;
+    max-width: 1240px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 48px;
+    color: white;
+    @media (max-width : 1024px) {
+        font-size: 40px;
+    }
+    @media (max-width : 768px) {
+        font-size: 24px;
+    }
+    @media (max-width : 420px) {
+        width: 227px;
+        white-space: normal;
+    }
+}
+
+@mixin dropdown__large{
+    position: relative;
+    display: grid;
+    width: 988px;
+    height: 32px;
+    padding: 10px 20px 10px 15px;
+    background: $main-color;
+    border-radius: 5px;
+
+    .dropdown__arrow{
+        justify-self: end;
+    }
+}
+
+@mixin dropdown__text-large{
+    position: absolute;
+    
+}

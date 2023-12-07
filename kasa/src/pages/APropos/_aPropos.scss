@@ -1,0 +1,19 @@
+.aPropos{
+    margin: 38px auto 38px auto;
+    max-width: 1240px;
+    @media (max-width : 1280px) {
+        margin: 38px 20px 38px 20px;
+    }
+    @media (max-width : 768px) {
+        margin: 19px 20px 19px 20px;
+    }
+
+    .background__aPropos-container{
+        @include background__header;
+       
+        .background__aPropos-img{
+            @include background__header-img;
+        }
+    }
+
+}

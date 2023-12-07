@@ -1,0 +1,23 @@
+.card__apartment{
+    position: relative;
+    width: 340px;
+    height: 340px;
+    background: black;
+    mix-blend-mode: darken;
+    border-radius: 10px;
+    
+    .card__apartment-img{
+        width: 340px;
+        height: 340px;
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+
+    p{
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        font-size: 18px;
+        color: white;
+    }
+}

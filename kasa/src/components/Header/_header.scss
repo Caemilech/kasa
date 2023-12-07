@@ -2,15 +2,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 45px auto 50px auto;
-    max-width: 1024px;
-    @media (max-width : 1024px) {
-        margin: 20px 20px 27px 20px ;
+    max-width: 1240px;
+    @media (max-width : 1280px) {
+        margin: 45px 20px 50px 20px ;
+    }
+    @media (max-width: 768px) {
+        margin: 20px 20px 27px 20px;
     }
 
-    .kasa_logo_header{
+    .kasa-logo__header-img{
         @media (max-width : 768px) {
             width: 145px;
             height: 46px;
+        }
+        @media (max-width: 375px) {
+            width: 100px;
+            height: 32px;
         }
     }
 
@@ -28,10 +35,10 @@
         }
         
         a{
-            color: #FF6060;
+            color: $main-color;
         }
 
-        .current-page{
+        .current-page__underline{
             text-decoration: underline;
         }
     }

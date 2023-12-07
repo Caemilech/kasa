@@ -1,0 +1,15 @@
+.card{
+    position: relative;
+    width: 340px;
+    height: 340px;
+    background: $linear-gradient__card;
+    border-radius: 10px;
+
+    p{
+        position: absolute;
+        top: 80%;
+        left: 5%;
+        font-size: 18px;
+        color: white;
+    }
+}
