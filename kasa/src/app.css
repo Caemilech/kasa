@@ -123,19 +123,6 @@ a {
   color: white;
 }
 
-.dropdown__container {
-  position: relative;
-  display: grid;
-  width: 988px;
-  height: 32px;
-  padding: 10px 20px 10px 15px;
-  background: #FF6060;
-  border-radius: 5px;
-}
-.dropdown__container .dropdown__arrow {
-  justify-self: end;
-}
-
 .home {
   margin: 45px auto 50px auto;
   max-width: 1240px;
@@ -238,13 +225,13 @@ a {
 }
 @media (max-width: 768px) {
   .home .background__apartment-card .card__apartment {
-    width: 335px;
+    width: 320px;
     height: 255px;
   }
 }
 @media (max-width: 375px) {
   .home .background__apartment-card .card__apartment {
-    width: 280px;
+    width: 260px;
     height: 255px;
   }
 }
@@ -256,13 +243,13 @@ a {
 }
 @media (max-width: 768px) {
   .home .background__apartment-card .card__apartment .card__apartment-img {
-    width: 335px;
+    width: 320px;
     height: 255px;
   }
 }
 @media (max-width: 375px) {
   .home .background__apartment-card .card__apartment .card__apartment-img {
-    width: 280px;
+    width: 260px;
     height: 255px;
   }
 }
@@ -305,5 +292,60 @@ a {
 @media (max-width: 768px) {
   .aPropos .background__aPropos-container .background__aPropos-img {
     height: 111px;
+  }
+}
+.aPropos .dropdown__aPropos-container {
+  display: grid;
+  grid-gap: 30px 0;
+  justify-items: center;
+  margin-top: 38px;
+}
+.aPropos .dropdown__aPropos-container .dropdown__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #FF6060;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  width: 964px;
+  height: 32px;
+}
+.aPropos .dropdown__aPropos-container .dropdown__title {
+  font-size: 24px;
+  color: white;
+}
+.aPropos .dropdown__aPropos-container .dropdown__arrow {
+  justify-self: end;
+}
+.aPropos .dropdown__aPropos-container .dropdown__text {
+  justify-items: center;
+  background: #F6F6F6;
+  padding: 20px;
+  color: #FF6060;
+  width: 944px;
+}
+@media (max-width: 1024px) {
+  .aPropos .dropdown__aPropos-container .dropdown__container {
+    width: 582px;
+    height: 32px;
+  }
+  .aPropos .dropdown__aPropos-container .dropdown__title {
+    font-size: 18px;
+    color: white;
+  }
+  .aPropos .dropdown__aPropos-container .dropdown__text {
+    width: 562px;
+  }
+}
+@media (max-width: 768px) {
+  .aPropos .dropdown__aPropos-container .dropdown__container {
+    width: 240px;
+    height: 32px;
+  }
+  .aPropos .dropdown__aPropos-container .dropdown__title {
+    font-size: 18px;
+    color: white;
+  }
+  .aPropos .dropdown__aPropos-container .dropdown__text {
+    width: 220px;
   }
 }/*# sourceMappingURL=app.css.map */

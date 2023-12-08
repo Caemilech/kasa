@@ -1,3 +1,83 @@
-.dropdown__container{
-    @include dropdown__large;
+@mixin dropdown__large{
+    .dropdown__container{
+        @include dropdown;
+        @include dropdown__width-large;
+    }
+   
+    .dropdown__title{
+        @include dropdown__title-large;
+    }
+
+    .dropdown__arrow{
+        @include dropdown__arrow;
+    }
+
+    .dropdown__text{
+        @include dropdown__text;
+        @include dropdown__width-text-large;
+    }
+}
+
+@mixin dropdown__medium{
+    .dropdown__container{
+        @include dropdown;
+        @include dropdown__width-medium;
+    }
+   
+    .dropdown__title{
+        @include dropdown__title-medium;
+    }
+
+    .dropdown__arrow{
+        @include dropdown__arrow;
+    }
+
+    .dropdown__text{
+        @include dropdown__text;
+        @include dropdown__width-text-medium;
+    }
+}
+
+@mixin dropdown__small{
+    .dropdown__container{
+        @include dropdown;
+        @include dropdown__width-small;
+    }
+   
+    .dropdown__title{
+        @include dropdown__title-small;
+    }
+
+    .dropdown__arrow{
+        @include dropdown__arrow;
+    }
+
+    .dropdown__text{
+        @include dropdown__text;
+        @include dropdown__width-text-small;
+    }
+}
+
+@mixin dropdown__medium-reponsive{
+    .dropdown__container{
+        @include dropdown__width-medium;
+    }
+    .dropdown__title{
+        @include dropdown__title-medium;
+    }
+    .dropdown__text{
+        @include dropdown__width-text-medium;
+    }
+}
+
+@mixin dropdown__small-reponsive{
+    .dropdown__container{
+        @include dropdown__width-small;
+    }
+    .dropdown__title{
+        @include dropdown__title-small;
+    }
+    .dropdown__text{
+        @include dropdown__width-text-small;
+    }
 }

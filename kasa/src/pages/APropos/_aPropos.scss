@@ -16,4 +16,17 @@
         }
     }
 
+    .dropdown__aPropos-container{
+        display: grid;
+        grid-gap: 30px 0;
+        justify-items: center;
+        margin-top: 38px;
+        @include dropdown__large;
+        @media (max-width: 1024px){
+            @include dropdown__medium-reponsive;
+        }
+        @media (max-width: 768px){
+            @include dropdown__small-reponsive;
+        }
+    }
 }
