@@ -5,7 +5,7 @@ import Header from './components/Header/header'
 import Home from './pages/Home/home'
 import FicheLogement from './pages/FicheLogement'
 import APropos from './pages/APropos/aPropos'
-import Error from './pages/Error'
+import Error from './pages/Error/error'
 import Footer from './components/Footer/footer'
 import './app.css'
 

@@ -1,10 +1,31 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ReactComponent as ArrowDropdown } from './ArrowDropdown.svg'
 import { ReactComponent as ArrowDropdownBack } from './ArrowDropdownBack.svg'
 
 const Dropdown = (props) => {
 
-const [isOpen, setIsOpen] = useState(false)
+const [open, setOpen] = useState(false)
+
+const dropdownText = useRef()
+
+
+
+useEffect(() => {
+    let handler = (e)=>{
+        
+        if(!dropdownText.current.contains(e.target)){
+            setOpen(false)
+            
+        } 
+    }
+
+    document.body.addEventListener('mousedown', handler)
+
+    return() => {
+        document.body.removeEventListener('mousedown', handler)
+     
+    }
+})
 const dropdownElements = props.dropdownElements
     return (
         
@@ -12,24 +33,17 @@ const dropdownElements = props.dropdownElements
 
             return (
 
-                <div key={dropdownElement.id}>
+                <div key={dropdownElement.id} ref={dropdownText}>
                     <div className='dropdown__container'>
                         <p className='dropdown__title'>{dropdownElement.title}</p>
-                        {!isOpen ? (
-                            <ArrowDropdown className='dropdown__arrow' onClick={() => setIsOpen((prev) => !prev)}/>
-                        ):
-                        (
-                            <ArrowDropdownBack className='dropdown__arrow' onClick={() => setIsOpen((prev) => !prev)}/>
-                        )}
+                        <ArrowDropdown className={`dropdown__arrow ${open ? 'active' : 'inactive'}`} onClick={() => { setOpen(!open)}} />
                     </div>
-                    {isOpen && (
-                        <div className='dropdown__text'>
-                            <p>{dropdownElement.text}</p>
-                        </div>
-                    )}
-                </div>        
+                    <p className={`dropdown__text ${open ? 'active' : 'inactive'}`}>{dropdownElement.text}</p> 
+                </div> 
+
             )
-        })  
+        }
+        )  
     )
 }
 

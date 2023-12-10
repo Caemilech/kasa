@@ -123,6 +123,31 @@ a {
   color: white;
 }
 
+.dropdown__text.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all ease-in 200ms 50ms;
+  padding: 20px;
+}
+
+.dropdown__text.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in 200ms 50ms;
+  padding: 0 20px 0 20px;
+  height: 0;
+}
+
+.dropdown__arrow.active {
+  transform: rotate(-180deg);
+  transition: all ease-in 200ms 50ms;
+}
+
+.dropdown__arrow.inactive {
+  transform: rotate(0deg);
+  transition: all ease-in 200ms 50ms;
+}
+
 .home {
   margin: 45px auto 50px auto;
   max-width: 1240px;
@@ -300,6 +325,11 @@ a {
   justify-items: center;
   margin-top: 38px;
 }
+@media (max-width: 768px) {
+  .aPropos .dropdown__aPropos-container {
+    margin-top: 19px;
+  }
+}
 .aPropos .dropdown__aPropos-container .dropdown__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -317,9 +347,7 @@ a {
   justify-self: end;
 }
 .aPropos .dropdown__aPropos-container .dropdown__text {
-  justify-items: center;
   background: #F6F6F6;
-  padding: 20px;
   color: #FF6060;
   width: 944px;
 }
@@ -347,5 +375,55 @@ a {
   }
   .aPropos .dropdown__aPropos-container .dropdown__text {
     width: 220px;
+  }
+}
+
+.error__container {
+  display: grid;
+  justify-items: center;
+  grid-gap: 139px 0;
+  margin: 139px 20px 139px 20px;
+  color: #FF6060;
+}
+@media (max-width: 768px) {
+  .error__container {
+    margin: 113px 20px 113px 20px;
+    grid-gap: 113px 0;
+  }
+}
+.error__container .error__name {
+  font-size: 288px;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .error__container .error__name {
+    font-size: 216px;
+  }
+}
+@media (max-width: 768px) {
+  .error__container .error__name {
+    font-size: 96px;
+  }
+}
+.error__container .error__text {
+  font-size: 36px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .error__container .error__text {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .error__container .error__text {
+    font-size: 20px;
+  }
+}
+.error__container p {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .error__container p {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=app.css.map */

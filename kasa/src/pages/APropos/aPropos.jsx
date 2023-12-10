@@ -40,7 +40,6 @@ const APropos = () => {
                 <Dropdown dropdownElements={dropdownElements1} />
                 <Dropdown dropdownElements={dropdownElements2} />
                 <Dropdown dropdownElements={dropdownElements3} />
-                <Dropdown dropdownElements={dropdownElements4} />
             </div>
         </div>
     )
