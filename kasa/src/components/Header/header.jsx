@@ -1,18 +1,16 @@
-import { Link } from 'react-router-dom'
-import { ReactComponent as KasaLogoHeader } from './KasaLogoHeader.svg'
+import { NavLink } from 'react-router-dom'
+import KasaLogoHeader from './KasaLogoHeader.svg'
 
-const header = () => {
+const Header = () => {
     return (
-
-        <div className='header'>
-            <KasaLogoHeader className='kasa-logo__header-img' />
+        <header className='header'>
+            <img src={ KasaLogoHeader } alt='KasaLogoHeader' className='kasa-logo__header-img' />
             <nav>
-                <Link to='/' className='current-page__underline'>Accueil</Link>
-                <Link to='/APropos'>A Propos</Link>
+                <NavLink to='/'>Accueil</NavLink>
+                <NavLink to='/APropos'>A Propos</NavLink>
             </nav> 
-        </div>
-
+        </header>
     )
 }
 
-export default header
+export default Header

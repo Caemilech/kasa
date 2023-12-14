@@ -1,13 +1,11 @@
-import BackgroundHome from './BackgroundHome.jpg'
 import CardApartment from '../../components/CardApartment/cardApartment'
+import Banner from '../../components/Banner/banner'
+import BannerHomeImg from './BannerHomeImg.jpg'
 
-const home = () => {
+const Home = () => {
     return (
         <div className='home'>
-            <div className='background__home-container'>
-                <img className='background__home-img' src={BackgroundHome} alt='BackgroundHome' />
-                <p>Chez vous, partout et ailleurs</p>
-            </div>
+            <Banner picture={BannerHomeImg} text={'Chez vous, partout et ailleurs'}/>
             <div className='background__apartment-card'>
                 <CardApartment />
             </div>
@@ -15,4 +13,4 @@ const home = () => {
     )
 }
 
-export default home
+export default Home

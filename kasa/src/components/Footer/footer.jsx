@@ -1,14 +1,12 @@
-import { ReactComponent as KasaLogoFooter} from './KasaLogoFooter.svg'
+import KasaLogoFooter from './KasaLogoFooter.svg'
 
-const footer = () => {
+const Footer = () => {
     return (
-
-        <div className='footer'>
-            <KasaLogoFooter />
+        <footer className='footer'>
+            <img src={ KasaLogoFooter } alt='KasaLogoFooter'/>
             <p>© 2020 Kasa. All rights reserved</p>
-        </div>
-
+        </footer>
     )
 }
 
-export default footer
+export default Footer

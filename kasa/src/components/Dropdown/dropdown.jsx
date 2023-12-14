@@ -1,50 +1,29 @@
-import { useState, useEffect, useRef } from 'react'
-import { ReactComponent as ArrowDropdown } from './ArrowDropdown.svg'
-import { ReactComponent as ArrowDropdownBack } from './ArrowDropdownBack.svg'
+import { useState } from 'react'
+import PropTypes from 'prop-types'
+import ArrowDropdown from './ArrowDropdown.svg'
 
 const Dropdown = (props) => {
 
-const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false)
 
-const dropdownText = useRef()
-
-
-
-useEffect(() => {
-    let handler = (e)=>{
-        
-        if(!dropdownText.current.contains(e.target)){
-            setOpen(false)
-            
-        } 
-    }
-
-    document.body.addEventListener('mousedown', handler)
-
-    return() => {
-        document.body.removeEventListener('mousedown', handler)
-     
-    }
-})
-const dropdownElements = props.dropdownElements
     return (
-        
-        dropdownElements && dropdownElements.map( dropdownElement => {
-
-            return (
-
-                <div key={dropdownElement.id} ref={dropdownText}>
-                    <div className='dropdown__container'>
-                        <p className='dropdown__title'>{dropdownElement.title}</p>
-                        <ArrowDropdown className={`dropdown__arrow ${open ? 'active' : 'inactive'}`} onClick={() => { setOpen(!open)}} />
-                    </div>
-                    <p className={`dropdown__text ${open ? 'active' : 'inactive'}`}>{dropdownElement.text}</p> 
-                </div> 
-
-            )
-        }
-        )  
+        <div>
+            <div className={`dropdown__container`} onClick={() => setOpen((prev) => !prev)}>
+                <p className='dropdown__title'>{props.title}</p>
+                <img src={ArrowDropdown} alt='ArrowDropdown' className={`dropdown__arrow ${open ? 'active' : 'inactive'}`}/>
+            </div>
+            <div className={`dropdown__text ${open ? 'active' : 'inactive'}`}>
+                <div>
+                    {props.text}
+                </div>  
+            </div> 
+        </div>
     )
+}
+
+Dropdown.propTypes = {
+    title : PropTypes.string,
+    text : PropTypes.string,
 }
 
 export default Dropdown

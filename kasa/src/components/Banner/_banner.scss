@@ -1,0 +1,60 @@
+@mixin banner__container {
+    position: relative;
+    max-width: 1240px;
+    height: 223px;
+    margin-bottom: 43px;
+    border-radius: 25px;
+    background: black;
+    mix-blend-mode: darken;
+    
+    @media (max-width : 768px) {
+        height: 111px;
+        margin-bottom: 27px;
+    }
+}
+
+@mixin banner__img {
+    width: 100%;
+    height: 223px;
+    object-fit: cover;
+    opacity: 0.6;
+    border-radius: 25px;
+    @media (max-width : 768px) {
+        height: 111px;
+    }
+}
+
+@mixin banner__text-center {
+    position: absolute;
+    max-width: 1240px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 48px;
+    color: white;
+    @media (max-width : 1024px) {
+        font-size: 40px;
+    }
+    @media (max-width : 768px) {
+        font-size: 24px;
+    }
+    @media (max-width : 420px) {
+        width: 227px;
+        white-space: normal;
+    }
+}
+
+@mixin banner {
+    .banner__container{
+        @include banner__container;
+       
+        .banner__img{
+            @include banner__img;
+        }
+
+        p{
+            @include banner__text-center;
+        }
+    }
+}

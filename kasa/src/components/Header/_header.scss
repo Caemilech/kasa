@@ -10,7 +10,7 @@
         margin: 20px 20px 27px 20px;
     }
 
-    .kasa-logo__header-img{
+    .kasa-logo__header-img {
         @media (max-width : 768px) {
             width: 145px;
             height: 46px;
@@ -34,12 +34,8 @@
             text-transform: uppercase; 
         }
         
-        a{
+        a {
             color: $main-color;
-        }
-
-        .current-page__underline{
-            text-decoration: underline;
         }
     }
 }

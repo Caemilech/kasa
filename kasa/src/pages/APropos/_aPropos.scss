@@ -7,14 +7,7 @@
     @media (max-width : 768px) {
         margin: 19px 20px 19px 20px;
     }
-
-    .background__aPropos-container{
-        @include background__header;
-       
-        .background__aPropos-img{
-            @include background__header-img;
-        }
-    }
+    @include banner;
 
     .dropdown__aPropos-container{
         display: grid;
@@ -24,12 +17,6 @@
         @media (max-width: 768px){
             margin-top: 19px;
         }
-        @include dropdown__large;
-        @media (max-width: 1024px){
-            @include dropdown__medium-reponsive;
-        }
-        @media (max-width: 768px){
-            @include dropdown__small-reponsive;
-        }
+        @include dropdown;
     }
 }
