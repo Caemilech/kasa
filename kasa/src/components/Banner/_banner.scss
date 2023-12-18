@@ -24,14 +24,14 @@
     }
 }
 
-@mixin banner__text-center {
+@mixin banner__text {
     position: absolute;
-    max-width: 1240px;
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
-    white-space: nowrap;
     font-size: 48px;
+    text-align: center;
     color: white;
     @media (max-width : 1024px) {
         font-size: 40px;
@@ -39,22 +39,21 @@
     @media (max-width : 768px) {
         font-size: 24px;
     }
-    @media (max-width : 420px) {
-        width: 227px;
-        white-space: normal;
+    @media (max-width : 425px) {
+        font-size: 20px;
     }
 }
 
 @mixin banner {
-    .banner__container{
+    .banner__container {
         @include banner__container;
        
-        .banner__img{
+        .banner__img {
             @include banner__img;
         }
 
-        p{
-            @include banner__text-center;
+        p {
+            @include banner__text;
         }
     }
 }

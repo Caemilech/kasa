@@ -8,55 +8,7 @@
         margin: 0 20px 27px 20px;
     }   
     @include banner;
-    
-
-    .background__apartment-card{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 50px 60px;
-        padding: 56px 50px 43px 50px;
-        justify-items: center;
-        background: $background__apartment-card;
-        border-radius: 25px;
-        @media (max-width : 1280px) {
-            grid-template-columns: 1fr 1fr;
-        }
-        @media (max-width : 768px) {
-            grid-template-columns: 1fr;
-            grid-gap: 20px 0;
-            padding: 0;
-            background: none;
-        }
-
-        .card__apartment {
-            @media (max-width : 1024px) {
-                width: 280px;
-                height: 255px;
-            }
-            @media (max-width : 768px) {
-                width: 320px;
-                height: 255px;
-            }
-            @media (max-width : 375px) {
-                width: 260px;
-                height: 255px;
-            }
-
-            .card__apartment-img{
-                @media (max-width : 1024px) {
-                    width: 280px;
-                    height: 255px;
-                }
-                @media (max-width : 768px) {
-                    width: 320px;
-                    height: 255px;
-                }
-                @media (max-width : 375px) {
-                    width: 260px;
-                    height: 255px;
-                }
-            }
-        }
-    }
+    @include card__apartment-background;
+    @include card__apartment;
 }
 

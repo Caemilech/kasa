@@ -1,0 +1,17 @@
+@mixin tag {
+    .tag__container{
+        display: grid;
+        width: 115px;
+        padding: 5px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        background: $main-color;
+        border-radius: 10px;
+        color: white;
+        
+        .tag__text{
+            font-size: 16px;
+        }
+    }
+}

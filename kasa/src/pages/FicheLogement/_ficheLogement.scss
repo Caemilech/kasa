@@ -1,0 +1,123 @@
+.ficheLogement__container {
+    padding: 20px;
+
+    .ficheLogement__details {
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-areas: "flLocation flHost"
+            "flTag flRate"
+            "flDropdown flDropdown";
+        grid-gap: 25px;
+        justify-content: center;
+        max-width: 1240px;
+        margin: 30px auto 50px auto;
+
+        @media (max-width: 1240px) {
+            grid-gap: 25px 50px;
+        }
+
+        @media (max-width: 768px) {
+            grid-gap: 25px 10px;
+            grid-template-areas: "flLocation flLocation"
+                "flTag flTag"
+                "flRate flHost"
+                "flDropdown flDropdown";
+            margin: 15px 0 27px 0;
+        }
+
+        .ficheLogement__location {
+            display: grid;
+            grid-template-rows: max-content max-content;
+            grid-area: flLocation;
+            grid-gap: 10px;
+            color: $main-color;
+
+            h1 {
+                font-size: 36px;
+
+                @media (max-width: 768px) {
+                    font-size: 26px
+                }
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .ficheLogement__host {
+            grid-area: flHost;
+            justify-content: end;
+            @include host;
+
+            .proprietaire_name {
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
+            }
+
+            .proprietaire__picture {
+                @media (max-width: 768px) {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        .ficheLogement__tag {
+            display: grid;
+            grid-template-columns: max-content max-content max-content max-content;
+            grid-area: flTag;
+            grid-gap: 10px;
+            @include tag;
+
+            @media (max-width: 768px) {
+                grid-template-columns: max-content max-content max-content;
+            }
+
+            @media (max-width: 425px) {
+                grid-template-columns: max-content max-content;
+            }
+        }
+
+        .ficheLogement__rate {
+            display: grid;
+            grid-template-columns: max-content max-content max-content max-content max-content;
+            grid-area: flRate;
+            grid-gap: 10px;
+            justify-content: end;
+            align-content: center;
+
+            @media (max-width: 768px) {
+                justify-content: start;
+            }
+
+            img {
+                @media (max-width: 768px) {
+                    height: 20px;
+                }
+            }
+        }
+
+        .ficheLogement__dropdown {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-area: flDropdown;
+            grid-gap: 20px;
+            @include dropdown;
+            @include dropdown__medium;
+
+            @media(max-width: 1240px) {
+                grid-template-columns: 1fr;
+
+                .dropdown__container {
+                    width: auto;
+                }
+
+                .dropdown__text {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

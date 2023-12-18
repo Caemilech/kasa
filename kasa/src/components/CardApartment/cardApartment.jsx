@@ -1,19 +1,20 @@
-import Data from '../../data/logements.json'
+import PropTypes from 'prop-types'
 
-const card = () => {
+
+const Card = (props) => {    
     return (
-        
-        Data && Data.map( data => {
-
-            return (
-                <div className='card__apartment' key={data.id}>
-                    <img className='card__apartment-img' src={data.cover}  alt={data.title} />
-                    <p>{data.title}</p>
-                </div>
-            )
-
-        })  
+        <>
+            <div className='card__apartment'>
+                <img className='card__apartment-img' src={props.cover} alt={props.title} />
+                <p>{props.title}</p>
+            </div>
+        </>
     )
 }
 
-export default card
+Card.propTypes = {
+    cover: PropTypes.string,
+    title : PropTypes.string,
+}
+
+export default Card

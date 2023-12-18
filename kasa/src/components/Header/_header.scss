@@ -15,8 +15,8 @@
             width: 145px;
             height: 46px;
         }
-        @media (max-width: 375px) {
-            width: 100px;
+        @media (max-width: 425px) {
+            width: 80px;
             height: 32px;
         }
     }
@@ -27,11 +27,15 @@
         grid-column-end: end;
         grid-gap: 57px;
         align-items: center;
-        font-size: 24px;
+        justify-items: center;
+        font-size: 28px;
         @media (max-width : 768px) {
             grid-gap: 10px ;
-            font-size: 12px;
+            font-size: 20px;
             text-transform: uppercase; 
+        }
+        @media (max-width: 425px) {
+            font-size: 16px;
         }
         
         a {

@@ -21,19 +21,28 @@
     }
 
     .error__text{
-        font-size: 36px;
+        font-size: 40px;
         text-align: center;
         @media (max-width: 1024px) {
             font-size: 30px;
         }
         @media (max-width: 768px) {
+            font-size: 25px;
+        }
+        @media (max-width: 425px) {
             font-size: 20px;
         }
     }
 
-    p{
-        font-size: 24px; 
+    a{
+        text-decoration: underline;
+        text-align: center;
+        color: $main-color;
+        font-size: 30px; 
         @media (max-width: 768px) {
+            font-size: 20px;
+        }
+        @media (max-width: 425px) {
             font-size: 16px;
         }
     }

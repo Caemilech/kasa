@@ -1,23 +1,64 @@
-.card__apartment{
-    position: relative;
-    width: 340px;
-    height: 340px;
-    background: black;
-    mix-blend-mode: darken;
-    border-radius: 10px;
-    
-    .card__apartment-img{
-        width: 340px;
+@mixin card__apartment {
+    .card__apartment {
+        position: relative;
+        width: 100%;
         height: 340px;
-        opacity: 0.6;
+        background: black;
+        mix-blend-mode: darken;
         border-radius: 10px;
-    }
 
-    p{
-        position: absolute;
-        top: 80%;
-        left: 5%;
-        font-size: 18px;
-        color: white;
+        @media (max-width : 425px) {
+            width: 100%;
+            height: 200px;
+        }
+
+        .card__apartment-img {
+            width: 100%;
+            height: 340px;
+            opacity: 0.6;
+            border-radius: 10px;
+
+            @media (max-width : 425px) {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 70%;
+            padding: 20px;
+            font-size: 20px;
+            color: white;
+            @media (max-width : 425px) {
+                top: 60%;
+            }
+        }
+    }
+}
+
+@mixin card__apartment-background {
+    .card__apartment-background {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px 50px;
+        padding: 56px 50px 43px 50px;
+        justify-items: center;
+        background: $background__container;
+        border-radius: 25px;
+
+        @media (max-width : 1280px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 1024px) {
+            grid-gap: 30px 30px;
+        }
+
+        @media (max-width : 768px) {
+            grid-template-columns: 1fr;
+            padding: 0;
+            background: none;
+        }
     }
 }

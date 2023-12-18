@@ -7,17 +7,19 @@ const Dropdown = (props) => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div>
-            <div className={`dropdown__container`} onClick={() => setOpen((prev) => !prev)}>
+        <>
+            <div className={`dropdown__container`} onClick={() => setOpen(!open)}>
                 <p className='dropdown__title'>{props.title}</p>
                 <img src={ArrowDropdown} alt='ArrowDropdown' className={`dropdown__arrow ${open ? 'active' : 'inactive'}`}/>
             </div>
             <div className={`dropdown__text ${open ? 'active' : 'inactive'}`}>
                 <div>
-                    {props.text}
+                    <li>
+                        {props.text}
+                    </li>  
                 </div>  
             </div> 
-        </div>
+        </>
     )
 }
 

@@ -7,16 +7,14 @@
     justify-items: center;
     background-color: black;
     @media (max-width : 768px) {
-        grid-gap: 0;
+        grid-gap: 10px;
     }
 
     p {
         font-size: 24px;
         color: white;
         @media (max-width : 768px) {
-            width: 112px;
-            font-size: 12px;
-            text-align: center;
+            font-size: 16px;
         }
     }
 }
