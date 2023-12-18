@@ -81,11 +81,8 @@
         }
 
         .ficheLogement__rate {
-            display: grid;
-            grid-template-columns: max-content max-content max-content max-content max-content;
+            @include rate;
             grid-area: flRate;
-            grid-gap: 10px;
-            justify-content: end;
             align-content: center;
 
             @media (max-width: 768px) {
@@ -93,8 +90,8 @@
             }
 
             img {
-                @media (max-width: 768px) {
-                    height: 20px;
+                @media (max-width: 425px) {
+                    height: 25px;
                 }
             }
         }

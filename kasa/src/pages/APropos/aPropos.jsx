@@ -7,7 +7,7 @@ const APropos = () => {
     return (
         <div className='aPropos'>
             <div className='background__aPropos-container'>
-                <Banner picture={BannerAProposImg} text={'Chez vous, partout et ailleurs'}/>
+                <Banner picture={BannerAProposImg} />
             </div>
             <div className='dropdown__aPropos-container'>
                 {DropdownElements.map((data) =>

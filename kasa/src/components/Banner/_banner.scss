@@ -52,8 +52,9 @@
             @include banner__img;
         }
 
-        p {
+        .banner__text {
             @include banner__text;
+            
         }
     }
 }

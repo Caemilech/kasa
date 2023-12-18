@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types'
 
 
-const Card = (props) => {    
+const Card = ({cover, title}) => {    
     return (
         <>
             <div className='card__apartment'>
-                <img className='card__apartment-img' src={props.cover} alt={props.title} />
-                <p>{props.title}</p>
+                <img className='card__apartment-img' src={cover} alt={title} />
+                <p>{title}</p>
             </div>
         </>
     )
 }
 
 Card.propTypes = {
-    cover: PropTypes.string,
+    cover: PropTypes.string.isRequired,
     title : PropTypes.string,
 }
 

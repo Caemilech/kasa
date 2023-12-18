@@ -118,8 +118,6 @@ ul, li {
   position: absolute;
   inset: 0;
   border-radius: 15px;
-  opacity: 0;
-  transition: opacity ease-in-out 0.6s;
 }
 @media (max-width: 768px) {
   .slider {
@@ -154,10 +152,6 @@ ul, li {
   }
 }
 
-.active {
-  opacity: 1;
-}
-
 .arrow__right {
   display: flex;
   position: absolute;
@@ -167,6 +161,13 @@ ul, li {
   height: 120px;
   z-index: 1;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .arrow__right {
+    width: 70px;
+    height: 70px;
+    top: 36%;
+  }
 }
 
 .arrow__left {
@@ -178,6 +179,13 @@ ul, li {
   width: 112px;
   z-index: 1;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .arrow__left {
+    width: 70px;
+    height: 70px;
+    top: 36%;
+  }
 }
 
 .home {
@@ -222,7 +230,7 @@ ul, li {
     height: 111px;
   }
 }
-.home .banner__container p {
+.home .banner__container .banner__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -233,17 +241,17 @@ ul, li {
   color: white;
 }
 @media (max-width: 1024px) {
-  .home .banner__container p {
+  .home .banner__container .banner__text {
     font-size: 40px;
   }
 }
 @media (max-width: 768px) {
-  .home .banner__container p {
+  .home .banner__container .banner__text {
     font-size: 24px;
   }
 }
 @media (max-width: 425px) {
-  .home .banner__container p {
+  .home .banner__container .banner__text {
     font-size: 20px;
   }
 }
@@ -272,6 +280,10 @@ ul, li {
     padding: 0;
     background: none;
   }
+}
+.home .card__apartment-background article {
+  width: 100%;
+  height: 100%;
 }
 .home .card__apartment {
   position: relative;
@@ -308,7 +320,7 @@ ul, li {
 }
 @media (max-width: 425px) {
   .home .card__apartment p {
-    top: 60%;
+    top: 50%;
   }
 }
 
@@ -354,7 +366,7 @@ ul, li {
     height: 111px;
   }
 }
-.aPropos .banner__container p {
+.aPropos .banner__container .banner__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -365,17 +377,17 @@ ul, li {
   color: white;
 }
 @media (max-width: 1024px) {
-  .aPropos .banner__container p {
+  .aPropos .banner__container .banner__text {
     font-size: 40px;
   }
 }
 @media (max-width: 768px) {
-  .aPropos .banner__container p {
+  .aPropos .banner__container .banner__text {
     font-size: 24px;
   }
 }
 @media (max-width: 425px) {
-  .aPropos .banner__container p {
+  .aPropos .banner__container .banner__text {
     font-size: 20px;
   }
 }
@@ -435,7 +447,7 @@ ul, li {
 .aPropos .dropdown__aPropos-container .dropdown__text > div {
   overflow: hidden;
 }
-.aPropos .dropdown__aPropos-container .dropdown__text > div > p {
+.aPropos .dropdown__aPropos-container .dropdown__text > div > ul > li {
   margin: 20px 0;
 }
 .aPropos .dropdown__aPropos-container .dropdown__text.active {
@@ -551,15 +563,15 @@ ul, li {
   grid-area: flHost;
   justify-content: end;
   display: grid;
-  grid-template-columns: max-content max-content;
-  grid-gap: 20px;
+  grid-template-columns: 100% max-content;
+  grid-gap: 15px;
   align-items: center;
   justify-items: end;
   color: #FF6060;
 }
 .ficheLogement__container .ficheLogement__details .ficheLogement__host .proprietaire_name {
   font-size: 20px;
-  width: 50%;
+  width: 60%;
   text-align: right;
 }
 .ficheLogement__container .ficheLogement__details .ficheLogement__host .proprietaire__picture {
@@ -611,9 +623,8 @@ ul, li {
 .ficheLogement__container .ficheLogement__details .ficheLogement__rate {
   display: grid;
   grid-template-columns: max-content max-content max-content max-content max-content;
-  grid-area: flRate;
   grid-gap: 10px;
-  justify-content: end;
+  grid-area: flRate;
   align-content: center;
 }
 @media (max-width: 768px) {
@@ -621,9 +632,9 @@ ul, li {
     justify-content: start;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .ficheLogement__container .ficheLogement__details .ficheLogement__rate img {
-    height: 20px;
+    height: 25px;
   }
 }
 .ficheLogement__container .ficheLogement__details .ficheLogement__dropdown {
@@ -677,7 +688,7 @@ ul, li {
 .ficheLogement__container .ficheLogement__details .ficheLogement__dropdown .dropdown__text > div {
   overflow: hidden;
 }
-.ficheLogement__container .ficheLogement__details .ficheLogement__dropdown .dropdown__text > div > p {
+.ficheLogement__container .ficheLogement__details .ficheLogement__dropdown .dropdown__text > div > ul > li {
   margin: 20px 0;
 }
 .ficheLogement__container .ficheLogement__details .ficheLogement__dropdown .dropdown__text.active {

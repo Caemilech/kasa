@@ -3,14 +3,18 @@ import Dropdown from '../../components/Dropdown/dropdown'
 import Tag from '../../components/Tags/tag'
 import Data from '../../data/logements.json'
 import Host from '../../components/Host/host'
+import Rate from '../../components/Rate/rate'
 import Carrousel from '../../components/Carrousel/carrousel'
-import StarFull from './StarFull.png'
-import StarEmpty from './StarEmpty.png'
 
 const FicheLogement = () => {
     const { id } = useParams()
 
     const ficheLogement = Data.find((logement) => logement.id === id);
+    if (!ficheLogement){
+      return(
+        <Navigate replace to='/Error' />
+      )
+    }
 
     const equipements = ficheLogement.equipments.map((equipment, i) => {
         return (
@@ -30,7 +34,6 @@ const FicheLogement = () => {
          
     return (
       <>
-        {ficheLogement ? (
         <div className='ficheLogement__container'>
           <Carrousel slides={ficheLogement.pictures} />
           <section className='ficheLogement__details'>
@@ -48,28 +51,19 @@ const FicheLogement = () => {
               {tagsLogement}
             </div>
             <div className='ficheLogement__rate'>
-              {notes.map((note) =>
-                score >= note ?
-                  (
-                    <img src={StarFull} />)
-                  : (
-                    <img src={StarEmpty} />
-                  )
-              )}
+             <Rate score={ficheLogement.rating} />
             </div>
             <div className='ficheLogement__dropdown'>
               <div>
-                <Dropdown title="Description" text={ficheLogement.description} />
+                <Dropdown title='Description' text={ficheLogement.description} />
               </div>
               <div>
-                <Dropdown title="Equipements" text={equipements} />
+                <Dropdown title='Equipements' text={equipements} />
               </div>
             </div>
           </section>
         </div>
-        ) :
-          (<Navigate replace to="/Error" />)}
-      </> 
+      </>
     )
 }
 

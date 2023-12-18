@@ -31,7 +31,7 @@
             font-size: 20px;
             color: white;
             @media (max-width : 425px) {
-                top: 60%;
+                top: 50%;
             }
         }
     }
@@ -60,5 +60,10 @@
             padding: 0;
             background: none;
         }
-    }
+
+        article{
+            width: 100%;
+            height: 100%;
+        }
+    }    
 }
