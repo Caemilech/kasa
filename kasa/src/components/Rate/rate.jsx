@@ -10,8 +10,10 @@ function Rate({score}) {
             {notes.map((note) =>
                 score >= note ?
                 (
-                    <img src={StarFull} alt='Etoile' key={note.toString()} />)
-                : (
+                    <img src={StarFull} alt='Etoile' key={note.toString()} />
+                )
+                :
+                (
                     <img src={StarEmpty} alt='Etoile' key={note.toString()}/>
                 )
             )}

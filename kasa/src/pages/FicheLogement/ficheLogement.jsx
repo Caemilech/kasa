@@ -27,11 +27,7 @@ const FicheLogement = () => {
     const tagsLogement = ficheLogement.tags.map((tags, i) => {
       return <Tag key={i} nom={tags} />;
     });
-    
-    
-    const notes = [1, 2, 3, 4, 5]
-    const score = ficheLogement.rating
-         
+             
     return (
       <>
         <div className='ficheLogement__container'>

@@ -14,7 +14,7 @@ const Card = ({cover, title}) => {
 
 Card.propTypes = {
     cover: PropTypes.string.isRequired,
-    title : PropTypes.string,
+    title : PropTypes.string.isRequired,
 }
 
 export default Card

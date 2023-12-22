@@ -26,7 +26,7 @@ const Dropdown = ({title, text}) => {
 }
 
 Dropdown.propTypes = {
-    title : PropTypes.string,
+    title : PropTypes.string.isRequired,
     text : PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array
